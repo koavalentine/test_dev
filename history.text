@@ -1,0 +1,233 @@
+tudent@student-HP-ProBook-650-G2:~$ mkdir test_dev
+student@student-HP-ProBook-650-G2:~$ nano REDMI.md
+student@student-HP-ProBook-650-G2:~$ nano README.md
+student@student-HP-ProBook-650-G2:~$ git init
+Dépôt Git vide initialisé dans /home/student/.git/
+student@student-HP-ProBook-650-G2:~$ ls
+Bureau     Images      Modèles  Public     snap             test_dev  Vidéos
+Documents  index.html  Musique  README.md  Téléchargements  val       webapp
+student@student-HP-ProBook-650-G2:~$ cd test_dev
+student@student-HP-ProBook-650-G2:~/test_dev$ mv ../README.md  .
+student@student-HP-ProBook-650-G2:~/test_dev$ ls
+README.md
+student@student-HP-ProBook-650-G2:~/test_dev$ ls
+README.md
+student@student-HP-ProBook-650-G2:~/test_dev$ git init
+Dépôt Git vide initialisé dans /home/student/test_dev/.git/
+student@student-HP-ProBook-650-G2:~/test_dev$ git add .
+student@student-HP-ProBook-650-G2:~/test_dev$ git commit -m "initialisation"
+[master (commit racine) 714f031] initialisation
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+student@student-HP-ProBook-650-G2:~/test_dev$ cd /
+student@student-HP-ProBook-650-G2:/$ ls
+bin    dev   lib    libx32      mnt   root  snap      sys  var
+boot   etc   lib32  lost+found  opt   run   srv       tmp
+cdrom  home  lib64  media       proc  sbin  swapfile  usr
+student@student-HP-ProBook-650-G2:/$ cd home
+student@student-HP-ProBook-650-G2:/home$ ls
+student
+student@student-HP-ProBook-650-G2:/home$ cd ..
+student@student-HP-ProBook-650-G2:/$ ls
+bin    dev   lib    libx32      mnt   root  snap      sys  var
+boot   etc   lib32  lost+found  opt   run   srv       tmp
+cdrom  home  lib64  media       proc  sbin  swapfile  usr
+student@student-HP-ProBook-650-G2:/$ cd test_dev
+bash: cd: test_dev: Aucun fichier ou dossier de ce type
+student@student-HP-ProBook-650-G2:/$ ls
+bin    dev   lib    libx32      mnt   root  snap      sys  var
+boot   etc   lib32  lost+found  opt   run   srv       tmp
+cdrom  home  lib64  media       proc  sbin  swapfile  usr
+student@student-HP-ProBook-650-G2:/$ cd home/student/
+Bureau/          .gnupg/          Musique/         test_dev/
+.cache/          Images/          Public/          val/
+.config/         .local/          snap/            Vidéos/
+Documents/       Modèles/         .ssh/            webapp/
+.git/            .mozilla/        Téléchargements/ 
+student@student-HP-ProBook-650-G2:/$ cd home/student/test_dev/
+student@student-HP-ProBook-650-G2:~/test_dev$ git remote add origin https://github.com/koavalentine/test_dev.git
+student@student-HP-ProBook-650-G2:~/test_dev$ git remote set-url origin git@github.com:koavalentine/test_dev.git
+student@student-HP-ProBook-650-G2:~/test_dev$ git push -u origin main
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com,140.82.121.3' (ECDSA) to the list of known hosts.
+Énumération des objets: 3, fait.
+Décompte des objets: 100% (3/3), fait.
+Compression par delta en utilisant jusqu'à 4 fils d'exécution
+Compression des objets: 100% (2/2), fait.
+Écriture des objets: 100% (3/3), 302 octets | 151.00 Kio/s, fait.
+Total 3 (delta 0), réutilisés 0 (delta 0)
+To github.com:koavalentine/test_dev.git
+ * [new branch]      main -> main
+La branche 'main' est paramétrée pour suivre la branche distante 'main' depuis 'origin'.
+student@student-HP-ProBook-650-G2:~/test_dev$ nano index.html
+student@student-HP-ProBook-650-G2:~/test_dev$ git add
+Rien de spécifié, rien n'a été ajouté.
+Vous vouliez sûrement dire 'git add .' ?
+student@student-HP-ProBook-650-G2:~/test_dev$ git add .
+student@student-HP-ProBook-650-G2:~/test_dev$ git commit -m "ajout du fichier index.html"
+[main ba9e190] ajout du fichier index.html
+ 1 file changed, 4 insertions(+)
+ create mode 100644 index.html
+student@student-HP-ProBook-650-G2:~/test_dev$ git push -u origin main
+Warning: Permanently added the ECDSA host key for IP address '140.82.121.4' to the list of known hosts.
+Énumération des objets: 4, fait.
+Décompte des objets: 100% (4/4), fait.
+Compression par delta en utilisant jusqu'à 4 fils d'exécution
+Compression des objets: 100% (3/3), fait.
+Écriture des objets: 100% (3/3), 377 octets | 377.00 Kio/s, fait.
+Total 3 (delta 0), réutilisés 0 (delta 0)
+To github.com:koavalentine/test_dev.git
+   714f031..ba9e190  main -> main
+La branche 'main' est paramétrée pour suivre la branche distante 'main' depuis 'origin'.
+student@student-HP-ProBook-650-G2:~/test_dev$ git add .
+student@student-HP-ProBook-650-G2:~/test_dev$ nano k.html
+student@student-HP-ProBook-650-G2:~/test_dev$ git add .
+student@student-HP-ProBook-650-G2:~/test_dev$ git commit -m "ajout du fichier k.html"
+[main 341f20d] ajout du fichier k.html
+ 1 file changed, 31 insertions(+)
+ create mode 100644 k.html
+student@student-HP-ProBook-650-G2:~/test_dev$ git push -u origin main
+Énumération des objets: 4, fait.
+Décompte des objets: 100% (4/4), fait.
+Compression par delta en utilisant jusqu'à 4 fils d'exécution
+Compression des objets: 100% (3/3), fait.
+Écriture des objets: 100% (3/3), 712 octets | 712.00 Kio/s, fait.
+Total 3 (delta 0), réutilisés 0 (delta 0)
+To github.com:koavalentine/test_dev.git
+   ba9e190..341f20d  main -> main
+La branche 'main' est paramétrée pour suivre la branche distante 'main' depuis 'origin'.
+student@student-HP-ProBook-650-G2:~/test_dev$ cd ..
+student@student-HP-ProBook-650-G2:~$ git pull https://github.com/Legeni07/test.git
+remote: Enumerating objects: 209, done.
+remote: Counting objects: 100% (209/209), done.
+remote: Compressing objects: 100% (118/118), done.
+remote: Total 209 (delta 84), reused 188 (delta 66), pack-reused 0 (from 0)
+Réception d'objets: 100% (209/209), 24.11 Kio | 2.68 Mio/s, fait.
+Résolution des deltas: 100% (84/84), fait.
+Depuis https://github.com/Legeni07/test
+ * branch            HEAD       -> FETCH_HEAD
+student@student-HP-ProBook-650-G2:~$ ls
+2test.css   alomo.js    christLK.txt     fileA.txt      Guerar_b1a.txt  listeb1b.fts   MBAB1b.md                 ODJAGA.txt       SALUT_MICH  scam5       steve.html       Vidéos
+2test.js    alyzée.md   Détention        fileB.txt      HAINONWA.txt    listeb1b.md    Mde_3.txt                 perol            scam        scam6       tamo.hml         webapp
+ado.js      alyzée.txt  Dochrane         fileC.txt      ignore          liste.md       Modèles                   ph               scam1       scam.h      Téléchargements  ya.php
+Adonya.txt  amina.css   Dochrane❤️+2.txt  fileD.txt      Images          luciano.txt    Musique                   Prescillia❤️.txt  scam2       snap        test_dev         ye.html
+Alan.txt    Bureau      Dochrane.js      GITB1B.md      index.html      luc.php        NDENGUE_FONZE_BRINDEL.md  Public           scam3       Solange.mb  toto.xml         yimga.txt
+alias.txt   cat.txt     Documents        Guerar_b1a.md  liste_b1a.md    makcedzoa.txt  ngassa.txt                README.md        scam4       Solange.md  val              yo.xml
+student@student-HP-ProBook-650-G2:~$ touch valentine.txt
+student@student-HP-ProBook-650-G2:~$ git add .
+fatal: fstat de '.local/share/tracker/data/.meta.isrunning' impossible: Aucun fichier ou dossier de ce type
+student@student-HP-ProBook-650-G2:~$ mkdir test_dev
+mkdir: impossible de créer le répertoire «test_dev»: Le fichier existe
+student@student-HP-ProBook-650-G2:~$ mkdir test
+student@student-HP-ProBook-650-G2:~$ cd test
+student@student-HP-ProBook-650-G2:~/test$ git init
+Dépôt Git vide initialisé dans /home/student/test/.git/
+student@student-HP-ProBook-650-G2:~/test$ git pull https://github.com/Legeni07/test.git
+remote: Enumerating objects: 209, done.
+remote: Counting objects: 100% (209/209), done.
+remote: Compressing objects: 100% (118/118), done.
+remote: Total 209 (delta 84), reused 188 (delta 66), pack-reused 0 (from 0)
+Réception d'objets: 100% (209/209), 24.11 Kio | 2.19 Mio/s, fait.
+Résolution des deltas: 100% (84/84), fait.
+Depuis https://github.com/Legeni07/test
+ * branch            HEAD       -> FETCH_HEAD
+student@student-HP-ProBook-650-G2:~/test$ ls
+2test.css   alias.txt   cat.txt          Dochrane.js  GITB1B.md       liste_b1a.md  luc.php                   ngassa.txt       README.md   scam3   Solange.mb  ya.php
+2test.js    alomo.js    christLK.txt     fileA.txt    Guerar_b1a.md   listeb1b.fts  makcedzoa.txt             ODJAGA.txt       SALUT_MICH  scam4   Solange.md  ye.html
+ado.js      alyzée.md   Détention        fileB.txt    Guerar_b1a.txt  listeb1b.md   MBAB1b.md                 perol            scam        scam5   steve.html  yimga.txt
+Adonya.txt  alyzée.txt  Dochrane         fileC.txt    HAINONWA.txt    liste.md      Mde_3.txt                 ph               scam1       scam6   tamo.hml    yo.xml
+Alan.txt    amina.css   Dochrane❤️+2.txt  fileD.txt    ignore          luciano.txt   NDENGUE_FONZE_BRINDEL.md  Prescillia❤️.txt  scam2       scam.h  toto.xml
+student@student-HP-ProBook-650-G2:~/test$ touch valentine.txt
+student@student-HP-ProBook-650-G2:~/test$ git add .
+student@student-HP-ProBook-650-G2:~/test$ git commit -m "ajout de valentine.txt"
+[master beccdc3] ajout de valentine.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 valentine.txt
+student@student-HP-ProBook-650-G2:~/test$ git push -u origin main
+error: le spécificateur de référence source main ne correspond à aucune référence
+error: impossible de pousser des références vers 'origin'
+student@student-HP-ProBook-650-G2:~/test$ git commit -m "ajout du fichier valentine.txt"
+Sur la branche master
+rien à valider, la copie de travail est propre
+student@student-HP-ProBook-650-G2:~/test$ git push -u origin main
+error: le spécificateur de référence source main ne correspond à aucune référence
+error: impossible de pousser des références vers 'origin'
+student@student-HP-ProBook-650-G2:~/test$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Impossible de lire le dépôt distant.
+
+Veuillez vérifier que vous avez les droits d'accès
+et que le dépôt existe.
+student@student-HP-ProBook-650-G2:~/test$ git remote add origin  https://github.com/Legeni07/test.git
+student@student-HP-ProBook-650-G2:~/test$ git push -u origin master
+Username for 'https://github.com': ^C
+student@student-HP-ProBook-650-G2:~/test$ git remote set-url origin git@github.com:koavalentine/test.git
+student@student-HP-ProBook-650-G2:~/test$ git push -u origin master
+ERROR: Repository not found.
+fatal: Impossible de lire le dépôt distant.
+
+Veuillez vérifier que vous avez les droits d'accès
+et que le dépôt existe.
+student@student-HP-ProBook-650-G2:~/test$ git remote set-url origin git@github.com:Legeni07/test.git
+student@student-HP-ProBook-650-G2:~/test$ git push -u origin master
+To github.com:Legeni07/test.git
+ ! [rejected]        master -> master (fetch first)
+error: impossible de pousser des références vers 'git@github.com:Legeni07/test.git'
+astuce: Les mises à jour ont été rejetées car la branche distante contient du travail que
+astuce: vous n'avez pas en local. Ceci est généralement causé par un autre dépôt poussé
+astuce: vers la même référence. Vous pourriez intégrer d'abord les changements distants
+astuce: (par exemple 'git pull ...') avant de pousser à nouveau.
+astuce: Voir la 'Note à propos des avances rapides' dans 'git push --help' pour plus d'information.
+student@student-HP-ProBook-650-G2:~/test$ git pull https://github.com/Legeni07/test.git
+Depuis https://github.com/Legeni07/test
+ * branch            HEAD       -> FETCH_HEAD
+Déjà à jour.
+student@student-HP-ProBook-650-G2:~/test$ git push -u origin master
+To github.com:Legeni07/test.git
+ ! [rejected]        master -> master (fetch first)
+error: impossible de pousser des références vers 'git@github.com:Legeni07/test.git'
+astuce: Les mises à jour ont été rejetées car la branche distante contient du travail que
+astuce: vous n'avez pas en local. Ceci est généralement causé par un autre dépôt poussé
+astuce: vers la même référence. Vous pourriez intégrer d'abord les changements distants
+astuce: (par exemple 'git pull ...') avant de pousser à nouveau.
+astuce: Voir la 'Note à propos des avances rapides' dans 'git push --help' pour plus d'information.
+student@student-HP-ProBook-650-G2:~/test$ git fetch origin 
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 2 (delta 1), reused 2 (delta 1), pack-reused 0 (from 0)
+Dépaquetage des objets: 100% (2/2), 220 octets | 220.00 Kio/s, fait.
+Depuis github.com:Legeni07/test
+ * [nouvelle branche] main       -> origin/main
+ * [nouvelle branche] master     -> origin/master
+student@student-HP-ProBook-650-G2:~/test$ git push -u origin master
+To github.com:Legeni07/test.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: impossible de pousser des références vers 'git@github.com:Legeni07/test.git'
+astuce: Les mises à jour ont été rejetées car la pointe de la branche courante est derrière
+astuce: son homologue distant. Intégrez les changements distants (par exemple 'git pull ...')
+astuce: avant de pousser à nouveau.
+astuce: Voir la 'Note à propos des avances rapides' dans 'git push --help' pour plus d'information.
+student@student-HP-ProBook-650-G2:~/test$ git pull  origin master
+Depuis github.com:Legeni07/test
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ Franck.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Franck.txt
+student@student-HP-ProBook-650-G2:~/test$ git pull  origin master
+Depuis github.com:Legeni07/test
+ * branch            master     -> FETCH_HEAD
+Déjà à jour.
+student@student-HP-ProBook-650-G2:~/test$ git push -u origin master
+Énumération des objets: 6, fait.
+Décompte des objets: 100% (6/6), fait.
+Compression par delta en utilisant jusqu'à 4 fils d'exécution
+Compression des objets: 100% (4/4), fait.
+Écriture des objets: 100% (4/4), 521 octets | 521.00 Kio/s, fait.
+Total 4 (delta 2), réutilisés 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To github.com:Legeni07/test.git
+   d2e81c7..79f3300  master -> mastLa branche 'master' est paramétrée pour suivre la branche distante 'master' depuis 'origin'
